@@ -3,6 +3,7 @@ use std::time::Instant;
 mod v1;
 mod v2;
 mod v3;
+mod v4;
 
 fn main() {
     let now = Instant::now();
@@ -16,4 +17,8 @@ fn main() {
     let now = Instant::now();
     v3::run_v3();
     eprintln!("Elapsed V3: {:?}", now.elapsed());
+
+    let now = Instant::now();
+    v4::run_v4();
+    eprintln!("Elapsed V4: {:?}", now.elapsed());
 }
